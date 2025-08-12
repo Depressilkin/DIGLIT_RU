@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/Logo_dark.svg" type="image/x-icon">
+    <link rel="stylesheet" href="{% static "css/style.css" %}" >
+    <title>Diglit</title>
+</head>
+<body>
+    <div class="content">
+            
+        <div class="header">
+                <div class="logo">
+                <a href="{% url 'index' %}"> <img class="logo-img" src="{% static 'css/image/logo_white.svg' %}" alt="logo" height="50px" width="50px"></a>
+                </div>
+                <div class="nav">
+                    <div class="container">
+                        <ul class="menu">
+                            <li class="menu-list"><a class="menu-link" href="#">ЕГЭ</a></li>
+                            <li class="menu-list"><a class="menu-link" href="#">ОГЭ</a></li>
+                            <li class="menu-list"><a class="menu-link" href="{% url 'laboratory' %}">Лаборатория</a></li>
+                            <li class="menu-list"><a class="menu-link" href="#">Блог</a></li>
+
+                        </ul>
+                    </div> 
+
+                </div>
+        </div>
+
+        <div class="body_content">
+            <div class="prew">
+                <div id=container>
+                    <div id='flip'>
+                        <div><div>ИНФОРМАТИКА</div></div>
+                        <div><div>ПРОГРАММИРОВАНИЕ</div></div>
+                        <div><div>ЕГЭ-2025</div></div>
+                    </div>
+                </div>
+                
+                <h2 class="prew-text-title"> Подготовка к ЕГЭ по информатике с профессиональным репетитором</h2>
+                <p class="prew-text-list">
+                    <h3><u>Наши сильные стороны</u>:</h3>
+                    <ul class="prew-text-list">
+                        <li>Опыт работы с учениками <span class="liner">разных уровней</span> подготовки.</li>
+                        <li>Разработка <span class="liner">индивидуального маршрута</span> обучения <br> с учётом его особенностей и целей.</li>
+                        <li>Использование <span class="liner">современных методик</span> и технологий обучения.</li>
+                        <li>Отработка <span class="liner">практических навыков</span> решения задач разного уровня сложности.</li>
+                        <li><span class="liner">Уверенность в своих силах</span> перед экзаменом.</li>
+                        <li><span class="liner">Успешная сдача ЕГЭ и поступление</span> в выбранные вузы.</li>
+                    </ul>
+                
+            </div>
+            <div class="img-comp">
+                <img src="{% static 'css/image/comp.svg' %}" alt="comp">
+            </div>
+        </div>
+
+        <div class="gallery">
+            <h3><u>Вы получите</u>:</h3>
+            <div class="wrapper">
+                <div class="picture">
+                    <img src="{% static 'css/image/lk.jpg' %}" alt="личный кабинет" style="width: 350px; height: 350px;">
+                    <div>
+                        <p class="prew-text">
+                            Безграничный доступ к базе знаний. Удобный контроль качества подготовки и успеваемости отражается в личном кабинете. 
+                        </p>
+                    </div>
+                </div>
+                <div class="picture">
+                    <p class="prew-text text-border">
+                        Цифровой след обучения сохранит все поинты и даст возможность возвращаться в любой момент в важную тему.
+                    </p>
+                    <img src="{% static 'css/image/etail.jpg' %}" alt="цифровой след" style="width: 350px; height: 350px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="cubes">
+            <div class="product-cart">
+                <article class="description">
+                    <h2>ОГЭ ИНФОРМАТИКА</h2>
+                    <p>Курс индивидуальной подготовки к экзамену <br>  с наставником</p>
+                    <h3 class="nickname">от 1400</h3>
+                    <ul>
+                        <li id="easy_ul1">Индивидуальный наставник</li>
+                        <li id="easy_ul2">Занятия онлайн</li>
+                        <li id="easy_ul3">Длительность курса 48 ак. часа</li>
+                        <li id="easy_ul4">24 домашних задания</li>
+                        <li id="easy_ul5">Доступ к записи занятий</li>
+                        <li id="easy_ul6">Удобное расписание</li>
+                    </ul>
+                    <a href="https://t.me/silkin_xandr" class="submit">ЗАПИСАТЬСЯ</a>
+                </article>
+            </div>
+            <div class="product-cart">
+                <article class="description">
+                    <h2>EГЭ ИНФОРМАТИКА</h2>
+                    <p>Курс индивидуальной подготовки к экзамену <br>  с наставником</p>
+                    <h3 class="nickname">от 1800</h3>
+                    <ul>
+                        <li id="easy_ul1">Индивидуальный наставник</li>
+                        <li id="easy_ul2">Занятия онлайн</li>
+                        <li id="easy_ul3">Длительность курса 64 ак. часа</li>
+                        <li id="easy_ul4">32 домашних задания</li>
+                        <li id="easy_ul5">Доступ к записи занятий</li>
+                        <li id="easy_ul6">Удобное расписание</li>
+                    </ul>
+                    <a href="https://t.me/silkin_xandr" class="submit">ЗАПИСАТЬСЯ</a>
+                </article>
+            </div>
+
+            <div class="product-cart">
+                <article class="description">
+                    <h2>ИНФОРМАТИКА</h2>
+                    <p>Курс индивидуальной подготовки по предмету <br>  с наставником</p>
+                    <h3 class="nickname">Подписка на репетитора</h3>
+                    <ul>
+                        <li id="easy_ul1">Индивидуальный наставник</li>
+                        <li id="easy_ul2">Занятия онлайн</li>
+                        <li id="easy_ul3">Школьный курс информатики</li>
+                        <li id="easy_ul4">Базовый или углублённый уровень</li>
+                        <li id="easy_ul5">Доступ к записи занятий</li>
+                        <li id="easy_ul6">Удобное расписание</li>
+                    </ul>
+                    <a href="https://t.me/silkin_xandr" class="submit">ЗАПИСАТЬСЯ</a>
+
+                </article>
+                
+            </div>
+
+        </div>
+        <footer>
+            <div class="footer">
+                <div class="social">
+                <a href="#"> <img src="{% static 'css/image/youtube.png' %}" class="soc-foto" alt="#"></a>
+                <a href="https://t.me/silkin_xandr"> <img src="{% static 'css/image/telegram.png' %}" class="soc-foto" alt="#"></a>
+                <a href="https://vk.com/depressilkin"> <img src="{% static 'css/image/vk.com.png' %}" class="soc-foto" alt="#"></a>
+                <a href="https://rutube.ru/channel/29943550/"> <img src="{% static 'css/image/RUTUBE.png' %}" class="soc-foto" alt="#"></a>
+                </div>
+                </div>
+                <div class="social-saver"> <p>все права сохранены ©️</p></div>
+        </footer>
+    </div>
+
+</body>
+</html>
