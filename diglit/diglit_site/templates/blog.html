@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/style.css" %}" >
+    <title>Diglit</title>
+</head>
+<body>
+    <div class="content">
+            
+        <div class="header">
+                <div class="logo">
+                <a href="{% url 'index' %}"> <img class="logo-img" src="{% static 'css/image/logo_white.svg' %}" alt="logo" width="120"></a>
+                </div>
+                <div class="nav">
+                    <div class="container">
+                       <ul class="menu">
+                            <li class="menu-list"><a class="menu-link" href="#">ЕГЭ</a></li>
+                            <li class="menu-list"><a class="menu-link" href="#">ОГЭ</a></li>
+                            <li class="menu-list"><a class="menu-link" href="#">Лаборатория</a></li>
+                            <li class="menu-list"><a class="menu-link" href="#">Блог</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+        </div>
+    <div class="body_content">
+        <div class="prew">
+        <h1 class="prew-text-title">Блог</h1>
+    </div>
+    </div>
+    <div class="">
+        <ul class="product-cart">
+            {% for post in posts %}
+            <div class="description">
+                <h3>{{ post.title }}</h3>
+                <img src="{{post.img.url}}" style="width: 350px; height: 350px;"> 
+                <p>{{ post.content }}</p>
+                <strong>{{ post.create_date }}</strong>
+            {% empty %}
+            <h3>Сорри, пока мыслей нет</h3>
+            {% endfor %}
+            </div>
+        </ul>
+    </div>
+
+</body>
+<!--
+    <footer>
+            <div class="footer">
+                <div class="social">
+                <a href="#"> <img src="{% static 'css/image/youtube.png' %}" class="soc-foto" alt="#"></a>
+                <a href="https://t.me/silkin_xandr"> <img src="{% static 'css/image/telegram.png' %}" class="soc-foto" alt="#"></a>
+                <a href="https://vk.com/depressilkin"> <img src="{% static 'css/image/vk.com.png' %}" class="soc-foto" alt="#"></a>
+                <a href="https://rutube.ru/channel/29943550/"> <img src="{% static 'css/image/RUTUBE.png' %}" class="soc-foto" alt="#"></a>
+                </div>
+                </div>
+                <div class="social-saver"> <p>все права сохранены ©️</p></div>
+        </footer>-->
+
+</html>

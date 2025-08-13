@@ -16,13 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path  # , re_path
+from django.conf import settings  # new
+from django.conf.urls.static import static  # new
 from diglit_site.views import index_render, laboratory_render, game_render
+from blog.views import blog_render
+admin.autodiscover()
 
 urlpatterns = [
     path('', index_render, name='index'),
-
     path('admin/', admin.site.urls),
     path('laboratory/str<name>', game_render, name='catch_up'),
     path('laboratory/str<name>', game_render, name='gallows'),
     path('laboratory/', laboratory_render, name='laboratory'),
+    path('blog/', blog_render, name='blog'),
 ]
+
+if settings.DEBUG:  # new
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
